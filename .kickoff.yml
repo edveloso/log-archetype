@@ -40,7 +40,7 @@ questions:
         type: input
         name: descricao_modulo
         message: Descricao do modulo no ELK
-        default: descricao
+        default: Descricao
 
     -
         type: input
@@ -51,14 +51,26 @@ questions:
     -
         type: input
         name: dependencia_1
-        message: Nome das primeira dependencia
-        default: dependencia1
+        message: Nome da dependencia base para o projeto : *_base
+        default: dep_base
 
     -
         type: input
         name: dependencia_2
-        message: Nome da segunda dependencia
-        default: dependencia2
+        message: Nome da dependencia de logapl
+        default: dep_logapl
+
+    -
+        type: input
+        name: path_log
+        message: Nome da pasta que vai conter o log no log4j
+        default: log/<PATH>
+        
+    -
+        type: input
+        name: pacote_logado
+        message: Nome da pacote que vai ser logado no log4j
+        default: br.com.pacote.negocio
 
 
 
