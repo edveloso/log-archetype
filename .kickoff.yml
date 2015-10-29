@@ -51,7 +51,7 @@ questions:
     -
         type: input
         name: dependencia_1
-        message: Nome da dependencia base para o projeto : *_base
+        message: Nome da dependencia base para o projeto dep_base
         default: dep_base
 
     -
