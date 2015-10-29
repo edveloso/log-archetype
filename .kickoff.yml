@@ -71,6 +71,7 @@ converters:
         - HEAD
         - metadata.json
         - Rakefile
+        - README.markdown
 
 fileNames:
     -
