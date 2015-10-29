@@ -29,11 +29,18 @@ postscript: >
 
     - change the file/logstash/51 file name
 
-    - change log4j.xml name if necessary
+    - change log4j.xml name if necessary and If using slash / in any path verify if its correct
 
 
 
 questions:
+
+    -
+        type: input
+        name: nome_corporacao
+        message: Nome da corporacao
+        default: minhaempresa
+
     -
         type: input
         name: nome_cliente
@@ -42,9 +49,10 @@ questions:
 
     -
         type: input
-        name: nome_corporacao
-        message: Nome da corporacao
-        default: minhaempresa
+        name: nome_sistema
+        message: Nome do sistema
+        default: meusistema
+
 
     -
         type: input
@@ -57,12 +65,6 @@ questions:
         name: descricao_modulo
         message: Descricao do modulo no ELK
         default: Descricao
-
-    -
-        type: input
-        name: nome_sistema
-        message: Nome do sistema
-        default: meusistema
 
     -
         type: input
@@ -93,12 +95,6 @@ questions:
         name: path_arquivo_log4j
         message: Nome da pasta onde fica o arquivo log4j
         default: <PATH>
-
-    -
-        type: input
-        name: domain_name
-        message: Nome do domínio
-        default: _domain
 
 
 

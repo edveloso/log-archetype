@@ -2,7 +2,7 @@ class {{nome_cliente}}_{{nome_sistema}}::logs {
 
   $domain_name = ${{nome_cliente}}_{{nome_sistema}}::domain_name
 
-  $xmlfiledir = "/u01/app/oracle/domains/${{{{domain_name}}}}/{{path_arquivo_log4j}}"
+  $xmlfiledir = "/u01/app/oracle/domains/${domain_name}/{{path_arquivo_log4j}}"
 
   exec{'teste-xmlfiledir-{{nome_sistema}}':
     command => "test -d ${xmlfiledir}",
