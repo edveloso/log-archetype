@@ -16,7 +16,7 @@ class {{nome_cliente}}_{{nome_sistema}} ( $domain_name = $::wls_domain ) {
   include {{nome_cliente}}_{{nome_sistema}}::config
   include {{nome_cliente}}_{{nome_sistema}}::logs
 
-  Class['inss_base'] ->
+  Class['{{nome_cliente}}'] ->
   Class['{{nome_cliente}}_{{nome_sistema}}::params'] ->
   Class['{{nome_cliente}}_{{nome_sistema}}::config'] ->
   Class['{{nome_cliente}}_{{nome_sistema}}::logs']
