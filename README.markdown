@@ -1,4 +1,3 @@
 # {{nome_cliente}}_{{nome_sistema}} #
 
-Este e o modulo inss_esocialrecpcao .Este modulo permite auditar as configuraçoes externalizadas da aplicação Esocial Recpcao.
-Este modulo e uma copia do inss_cniss_negocio
+Este é o modulo {{nome_cliente}}_{{nome_sistema}} .Este modulo permite auditar as configuraçoes externalizadas da aplicação {{nome_sistema}}.
