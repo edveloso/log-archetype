@@ -17,10 +17,19 @@ postscript: >
         cd <dest-folder>
         rm -rf bin && rm -rf lib && rm  index.js && rm gulpfile.js && rm package.json
 
-     - To execute in Vagrant change params.pp to
+     - To execute in Vagrant change manifests/params.pp to
 
         $owner   => 'vagrant'
         $group   => 'vagrant'
+
+    - Verify if manifests/logs.pp is correct
+
+        Must have in  $xmlfiledir value a ${ } in domain_name
+        If using slash / in any path verify if its correct
+
+    - change the file/logstash/51 file name
+
+    - change log4j.xml name if necessary
 
 
 
