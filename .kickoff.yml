@@ -23,8 +23,7 @@ postscript: >
         $group   => 'vagrant'
 
     - Verify if manifests/logs.pp is correct
-
-        Must have in  $xmlfiledir value a ${ } in domain_name
+        
         If using slash / in any path verify if its correct
 
     - change the file/logstash/51 file name
