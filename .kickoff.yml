@@ -12,10 +12,10 @@ postscript: >
 
     Next steps:
 
-     - Install the npm modules required by the newly generated application:
+     - Execute the following commands to remove unecessary files
 
         cd <dest-folder>
-        npm install
+        rm -rf bin && rm -rf lib && rm  index.js && rm gulpfile.js && rm package.json
 
 questions:
     -
@@ -89,6 +89,7 @@ questions:
 converters:
     mustache:
         - files/logstash/51_filter_cliente_nome_modulo.conf
+        - files/log4j.xml
         - config
         - descritpion
         - HEAD
