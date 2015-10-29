@@ -7,7 +7,7 @@ var buffer = require('vinyl-buffer');
 var markdown = require('gulp-markdown');
 
 gulp.task('docgen', function() {
-    gulp.src('docs/*.md', {base: 'docs/'})
+    gulp.src('*.md', {base: './'})
         .pipe(buffer())
         .pipe(markdown())
         .pipe(rename(function(path) {
@@ -15,7 +15,7 @@ gulp.task('docgen', function() {
         }))
         .pipe(through('subs', function(file, config) {
             var content = file.contents.toString();
-            gulp.src('docs/pageTemplate.html', {})
+            gulp.src('./pageTemplate.html', {})
                 .pipe(buffer())
                 .pipe(mustache({body: content}))
                 .pipe(rename(file.path))

@@ -61,17 +61,18 @@ questions:
         default: dependencia2
 
 
-fileNames:
-    -
-        from: files/logstash/51_filter_cliente_nome_modulo.conf
-        to: files/logstash/51_filter_{{nome_cliente}}_{{nome_modulo}}.conf
 
 
 converters:
     mustache:
-        - docs/files/logstash/51_filter_{{nome_cliente}}_{{nome_modulo}}.conf
-        - docs/config
-        - docs/descritpion
-        - docs/HEAD
-        - docs/metadata.json
-        - docs/Rakefile
+        - files/logstash/51_filter_cliente_nome_modulo.conf
+        - config
+        - descritpion
+        - HEAD
+        - metadata.json
+        - Rakefile
+
+fileNames:
+    -
+        from: files/logstash/51_filter_cliente_nome_modulo.conf
+        to: files/logstash/51_filter_{{nome_cliente}}_{{nome_modulo}}.conf
