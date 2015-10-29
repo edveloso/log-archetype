@@ -1,0 +1,1 @@
+Após a geração pode deletar as pastas bin/ e /lib e os arquivos index.js, gulpfile.js e package.json pois são necessárias apenas para a geração do boilerplate
