@@ -64,13 +64,26 @@ questions:
         type: input
         name: path_log
         message: Nome da pasta que vai conter o log no log4j
-        default: log/<PATH>
+        default: <PATH>
 
     -
         type: input
         name: pacote_logado
-        message: Nome da pacote que vai ser logado no log4j
+        message: Nome da pacote que vai ser logado
         default: br.com.pacote.negocio
+
+    -
+        type: input
+        name: path_arquivo_log4j
+        message: Nome da pasta onde fica o arquivo log4j
+        default: <PATH>
+
+    -
+        type: input
+        name: domain_name
+        message: Nome do domínio
+        default: _domain
+
 
 
 converters:
@@ -83,6 +96,10 @@ converters:
         - Rakefile
         - README.markdown
         - tests/init.pp
+        - manifests/config.pp
+        - manifests/init.pp
+        - manifests/logs.pp
+        - manifests/params.pp
 
 fileNames:
     -
