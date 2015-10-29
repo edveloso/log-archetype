@@ -2,7 +2,7 @@ class {{nome_cliente}}_{{nome_sistema}}::logs {
 
   $domain_name = ${{nome_cliente}}_{{nome_sistema}}::domain_name
 
-  $xmlfiledir = "/u01/app/oracle/domains/${domain_name}/path_arquivo_log4j"
+  $xmlfiledir = "/u01/app/oracle/domains/${{{domain_name}}}/{{path_arquivo_log4j}}"
 
   exec{'teste-xmlfiledir-{{nome_sistema}}':
     command => "test -d ${xmlfiledir}",
@@ -20,7 +20,7 @@ class {{nome_cliente}}_{{nome_sistema}}::logs {
   # esse padrao de log_dir utiliza * para o logstash detectar caso exista mais de uma instancia da aplicacao.
   # O titulo do recurso deve ser no formato cliente-sistema-categoria, conforme exemplificado abaixo.
   dtp_logapl::servidores::log4j_json {'{{nome_cliente}}_{{nome_sistema}}-geral':
-    path => "/u01/app/oracle/domains/*{{domain_name}}*/log/{{pacote_logado}}/{{nome_cliente}}_{{nome_sistema}}-geral.log"
+    path => "/u01/app/oracle/domains/*{{domain_name}}*/log/{{path_log}}/{{nome_cliente}}_{{nome_sistema}}-geral.log"
   }
 
 

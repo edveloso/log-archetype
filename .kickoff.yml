@@ -12,10 +12,17 @@ postscript: >
 
     Next steps:
 
-     - Execute the following commands to remove unecessary files
+     - Execute the following commands to remove unecessary files.
 
         cd <dest-folder>
         rm -rf bin && rm -rf lib && rm  index.js && rm gulpfile.js && rm package.json
+
+     - To execute in Vagrant change params.pp to
+
+        $owner   => 'vagrant'
+        $group   => 'vagrant'
+
+
 
 questions:
     -
