@@ -1,0 +1,45 @@
+{
+  "name": "{{nome_modulo}}",
+  "description": "{{descricao_modulo}}",
+  "version": "0.1.0",
+  "tags": [
+    "cli",
+    "util",
+    "tool",
+    "utility"
+  ],
+  "author": {
+    "name": "edveloso",
+    "email": "edveloso@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/edveloso/log-archetype/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/edveloso/log-archetype/blob/master/LICENSE"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/edveloso/log-archetype.git"
+  },
+  "bin": {
+    "ncli": "./bin/cli.js"
+  },
+  "main": "index",
+  "dependencies": {
+    "commander": "2.0.0"
+  },
+ "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-debug": "^1.0.1",
+    "gulp-markdown": "^1.0.0",
+    "gulp-mustache": "^1.0.0",
+    "gulp-through": "^0.3.0",
+    "vinyl-buffer": "^1.0.0",
+    "gulp-rename": "^1.2.0"
+  },
+  "scripts": {
+    "lint": "jshint **.js"
+  }
+}

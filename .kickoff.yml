@@ -1,0 +1,77 @@
+description: |
+    This is a project archetype for node.js based, cli applications.
+    New projects can be generated from this archetype by the
+    [kickoff](https://github.com/tombenke/kickoff) utility.
+
+welcome: >
+
+    You are generating a JavaScript project, which is
+    using node.js, and running as a command-line application.
+
+postscript: >
+
+    Next steps:
+
+     - Install the npm modules required by the newly generated application:
+
+        cd <dest-folder>
+        npm install
+
+questions:
+    -
+        type: input
+        name: nome_cliente
+        message: Nome do cliente da aplicação
+        default: cliente
+
+    -
+        type: input
+        name: nome_corporacao
+        message: Nome da corporacao
+        default: minhaempresa
+
+    -
+        type: input
+        name: nome_modulo
+        message: Nome do modulo no ELK
+        default: mod-cliente_sistema
+
+    -
+        type: input
+        name: descricao_modulo
+        message: Descricao do modulo no ELK
+        default: descricao
+
+    -
+        type: input
+        name: nome_sistema
+        message: Nome do sistema
+        default: meusistema
+
+    -
+        type: input
+        name: dependencia_1
+        message: Nome das primeira dependencia
+        default: dependencia1
+
+    -
+        type: input
+        name: dependencia_2
+        message: Nome da segunda dependencia
+        default: dependencia2
+
+
+fileNames:
+    -
+        from: files/logstash/51_filter_cliente_nome_modulo.conf
+        to: files/logstash/51_filter_{{nome_cliente}}_{{nome_modulo}}.conf
+
+
+converters:
+    mustache:
+        - docs/files/logstash/51_filter_{{nome_cliente}}_{{nome_modulo}}.conf
+        - docs/config
+        - docs/descritpion
+        - docs/HEAD
+        - docs/metadata.json
+        - docs/Rakefile
